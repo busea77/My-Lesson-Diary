@@ -15,14 +15,17 @@ body {
 /* Sidebar Styles */
 #sidebar {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 250px;
-    height: 100%;
-    background-color: #f6c1e4; /* Light pastel pink */
+    height: 100%; /* Tam ekran boyutu */
+    background-color: #f6c1e4;
     padding-top: 30px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    transform: translateX(-250px); /* Initially hidden */
     transition: transform 0.3s ease;
+    transform: translateX(-250px); /* Başlangıçta gizli */
 }
+
 
 #sidebar.active {
     transform: translateX(0); /* Sidebar appears when 'active' class is added */
@@ -31,8 +34,10 @@ body {
 .sidebar-header h2 {
     text-align: center;
     font-size: 1.8rem;
-    color: #fff;
-    margin-bottom: 20px;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-top: 10px;
 }
 
 #sidebar ul {
@@ -47,14 +52,15 @@ body {
 
 #sidebar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 1.2rem;
     display: block;
+    align-content: center;
 }
 
 #sidebar ul li a:hover {
     background-color: #e8a9cb;
-    border-radius: 5px;
+    height: 40px;
 }
 
 /* Main Content */
@@ -72,6 +78,8 @@ header {
 header h1 {
     font-size: 2.5rem;
     color: #333;
+    margin-top: 70px;
+    padding-bottom: 50px;
 }
 
 header p {
@@ -83,7 +91,7 @@ header p {
 .posts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 17px;
     margin-top: 30px;
 }
 
@@ -111,9 +119,50 @@ header p {
     margin-top: 10px;
 }
 
+/* Description Section */
+#description {
+    background-color: #f6c1e4; /* Pastel Pink Background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#description p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+}
+
+#description p strong {
+    font-weight: bold;
+    color: #e95c97; /* Accent color */
+}
+
+#description p em {
+    font-style: italic;
+    color: #6a6a6a; /* Slightly faded color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #description {
+        padding: 20px;
+    }
+
+    #description p {
+        font-size: 1rem;
+    }
+}
+
 /* Footer */
 footer {
-    background-color: #f6c1e4;
+    background-color: #eba4d4;
     text-align: center;
     padding: 20px;
     position: fixed;
@@ -131,31 +180,29 @@ footer p {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .sidebar-toggle {
-        display: block;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background-color: #f6c1e4;
-        color: #fff;
-        font-size: 2rem;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        z-index: 2000;
-    }
 
-    #main-content {
-        margin-left: 0;
-    }
-
-    #sidebar {
-        transform: translateX(-250px); /* Initially hidden */
-    }
-
-    #sidebar.active {
-        transform: translateX(0); /* Sidebar appears when 'active' class is added */
-    }
+.sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f6c1e4;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
 }
 
+#main-content {
+    margin-left: 0;
+}
+
+#sidebar {
+    transform: translateX(-250px); /* Initially hidden */
+}
+
+#sidebar.active {
+    transform: translateX(0); /* Sidebar appears when 'active' class is added */
+}
