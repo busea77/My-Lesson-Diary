@@ -4,44 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Learning Notes</title>
+    <title>My Learning Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Welcome to My Learning Notes</h1>
-            <p>Sharing knowledge and learning along the way.</p>
+    <!-- Sidebar Menu -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h2>My Blog</h2>
         </div>
-    </header>
+        <ul>
+            <li><a href="#math">Matematik</a></li>
+            <li><a href="#research">Araştırmalarım</a></li>
+            <li><a href="#books">Okuduğum Kitaplar</a></li>
+        </ul>
+    </nav>
 
-    <section class="content">
-        <div class="container">
-            <h2>Latest Notes</h2>
-            <div class="notes">
-                <div class="note-card">
-                    <h3>HTML Basics</h3>
-                    <p>Learn the basics of HTML and structure of a webpage.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-                <div class="note-card">
-                    <h3>CSS Styling</h3>
-                    <p>Understanding how CSS works and applying styles to web pages.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-                <div class="note-card">
-                    <h3>JavaScript Fundamentals</h3>
-                    <p>Learn the fundamental concepts of JavaScript for web development.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
+    <!-- Main Content -->
+    <div id="main-content">
+        <header>
+            <h1>Welcome to My Learning Blog</h1>
+            <p>En son yaptığım düzenlemeler burada.</p>
+        </header>
+
+        <!-- Latest Posts -->
+        <section class="posts">
+            <h2>En Son Düzenlediğim Bölümler</h2>
+            <div class="post-card">
+                <h3><a href="math.html">Matematik</a></h3>
+                <p>Son matematik çalışmam hakkında notlarım burada.</p>
             </div>
-        </div>
-    </section>
+            <div class="post-card">
+                <h3><a href="research.html">Araştırmalarım</a></h3>
+                <p>Yapmış olduğum araştırmaların kısa özeti burada.</p>
+            </div>
+            <div class="post-card">
+                <h3><a href="books.html">Okuduğum Kitaplar</a></h3>
+                <p>Son okuduğum kitapları ve düşündüklerimi paylaşıyorum.</p>
+            </div>
+        </section>
+    </div>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 My Learning Notes</p>
-        </div>
+        <p>&copy; 2025 My Learning Blog</p>
     </footer>
 </body>
 </html>
+
