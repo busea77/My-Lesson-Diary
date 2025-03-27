@@ -20,12 +20,12 @@ body {
     background-color: #f6c1e4; /* Light pastel pink */
     padding-top: 30px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-250px); /* Initially hidden */
     transition: transform 0.3s ease;
-    transform: translateX(-250px);
 }
 
 #sidebar.active {
-    transform: translateX(0);
+    transform: translateX(0); /* Sidebar appears when 'active' class is added */
 }
 
 .sidebar-header h2 {
@@ -125,3 +125,37 @@ footer p {
     font-size: 1rem;
     color: #fff;
 }
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #f6c1e4;
+        color: #fff;
+        font-size: 2rem;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    #main-content {
+        margin-left: 0;
+    }
+
+    #sidebar {
+        transform: translateX(-250px); /* Initially hidden */
+    }
+
+    #sidebar.active {
+        transform: translateX(0); /* Sidebar appears when 'active' class is added */
+    }
+}
+
